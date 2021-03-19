@@ -34,3 +34,9 @@ console.log('c', [
   [{ id: 3 }, { id: 'BYE' }],
   [{ id: 4 }, { id: 'BYE' }],
 ]);
+console.log('D', [
+  [{ id: 1 }, { id: 5 }],
+  [{ id: 4 }, { id: 'BYE' }],
+  [{ id: 2 }, { id: 'BYE' }],
+  [{ id: 3 }, { id: 'BYE' }],
+]);
