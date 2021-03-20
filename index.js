@@ -1,22 +1,19 @@
 const express = require('express');
+const { config } = require('./config/environment');
 
 const app = express();
-const port = process.env.PORT || 8080;
 
-const { MongoClient, MongoClientOptions } = require('mongodb');
+const { MongoClient } = require('mongodb');
 
-// * NOTE: Only for dev purposes -> "mongodb+srv://<username>:<password>@<your-cluster-url>/test?retryWrites=true&w=majority"
-const mongoURL = process.env.MONGO_URL || 'mongodb://localhost:27017/ggtech';
-
-/** @type MongoClientOptions */
+/** @type import('mongodb').MongoClientOptions */
 const mongoConfig = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
-const mongoClient = new MongoClient(mongoURL, mongoConfig);
+const mongoClient = new MongoClient(config.mongoURL, mongoConfig);
 
 app
-  .set('port', port)
+  .set('port', config.port)
   .use(express.json())
   .use(express.urlencoded({ extended: true }));
 
@@ -92,12 +89,12 @@ app
     }
     // console.log(_partidos);
 
-    const partidosGGTech = [
-      _partidos[0],
-      _partidos[3],
-      _partidos[1],
-      _partidos[2],
-    ];
+    // const partidosGGTech = [
+    //   _partidos[0],
+    //   _partidos[3],
+    //   _partidos[1],
+    //   _partidos[2],
+    // ];
     // console.log(partidosGGTech);
 
     const partidos = [
@@ -182,7 +179,7 @@ app
   );
 
 app.listen(app.get('port'), () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on http://localhost:${config.port}`);
 });
 
 module.exports.getApp = app;
