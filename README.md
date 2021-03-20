@@ -76,6 +76,7 @@ curl \
       - Se asume que el máximo de participantes son 8, (por confirmar)*
       - El id y el seed no tienen relación, aunque en este caso lo parezca
       - Que si los top rank ganan, no deben enfrentarse pronto y deben seguir teniendo ventaja contra los más débiles (en este caso que no sean adyacentes (?))
+      - Siguiendo Slaughter, los top jugadores siempre tendrán ventaja
     
     Limitaciones e incógnitas
       - La fuente de participantes
