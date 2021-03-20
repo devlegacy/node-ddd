@@ -1,6 +1,19 @@
 # Prueba técnica
 
-## Ejercicio 1 - Genera números primos
+## TODO
+
+- [ ] Rename repo to node-ggtech-technical-test
+- [ ] Add cross-env for security and handle environments
+- [ ] Add cors for security
+- [ ] Add some test
+- [ ] Analyze install cross-env (?)
+- [ ] Add hook for lint on commit npx mrm lint-staged (?)
+- [ ] [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
+
+
+## Algoritmia
+
+### Ejercicio 1 - Genera números primos
 
 Genera los números primos del **parámetro** `start` a `end`.
 Para la ruta: `/numbersPrime/:start/:end`
@@ -12,7 +25,7 @@ curl \
   -X GET http://localhost:8080/numbersPrime/1/100
 ```
 
-## Ejercicio 2 - Ordena un Array
+### Ejercicio 2 - Ordena un Array
 
 Ordena el array de números en base a la cantidad de veces que se repite, el array esta en el **body** con el nombre `numbers`.
 Para la ruta: `/sortArray`
@@ -25,7 +38,7 @@ curl \
   -d '{"numbers":[1,2,3,4,5,9,6,7,3,55,3,2,22,6,77,232,35,21,2,456,123,4,5]}' 
 ```
 
-## Ejercicio 3 - Genera un Bracket Simple
+### Ejercicio 3 - Genera un Bracket Simple
 
 1. Considera los siguientes puntos:
   a. El array **[partidos]** representa la **primera** ronda de un **Bracket** de Eliminación Simple de **8 participantes**.
@@ -73,6 +86,8 @@ curl \
     ~~~
     ~~~
 
+## Bases de datos
+
 3. Genera el código que reproduzca la solución que has descrito, valoraremos:
   a. Funcionalidad
   b. Facilidad de Lectura
@@ -108,7 +123,21 @@ Participants // es la variable de la colección Participants
 
 function getTournaments() {}
 
+```sh
+curl \
+  -H "Accept: application/json; charset=utf-8" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -X GET http://localhost:8080/tournaments
+```
+
 Completa la siguiente función para que regrese todos los torneos que contengan en su nombre o descripción
 el string que recibe como parámetro
 
 function getTournamentsByNameOrDescription(stringSearch) {}
+
+```sh
+curl \
+  -H "Accept: application/json; charset=utf-8" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -X GET http://localhost:8080/tournamentsByNameOrDescription/hello
+```
