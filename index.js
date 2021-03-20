@@ -1,6 +1,7 @@
-const express = require('express');
 const { config } = require('./config/environment');
 
+const cors = require('cors');
+const express = require('express');
 const app = express();
 
 const { MongoClient } = require('mongodb');
@@ -14,6 +15,7 @@ const mongoClient = new MongoClient(config.mongoURL, mongoConfig);
 
 app
   .set('port', config.port)
+  .use(cors())
   .use(express.json())
   .use(express.urlencoded({ extended: true }));
 
