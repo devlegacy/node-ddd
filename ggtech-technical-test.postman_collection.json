@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "a8929fb0-1ced-45e9-a164-01cc5c2da6d5",
+		"name": "ggtech-technical-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/numbersPrime/:start/:end",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/numbersPrime/10/100",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"numbersPrime",
+						"10",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/sortArray",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numbers\": [1,2,3,4,5,9,6,7,3,55,3,2,22,6,77,232,35,21,2,456,123,4,5]\r\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/sortArray",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sortArray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/generateBracket",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/generateBracket",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"generateBracket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tournaments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/tournaments",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tournaments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tournamentsByNameOrDescription/:nameOrDescription",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/tournamentsByNameOrDescription/et",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tournamentsByNameOrDescription",
+						"et"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
