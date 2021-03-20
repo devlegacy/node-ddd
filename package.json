@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node index",
-    "dev": "cross-env DEBUG=app:* nodemon index"
+    "start": "cross-env NODE_ENV=production node ./bin/www",
+    "dev": "cross-env DEBUG=app:* nodemon ./bin/www"
   },
   "keywords": [],
   "author": "Samuel R. <samuel_-_rojas@hotmail.com> (https://)",
