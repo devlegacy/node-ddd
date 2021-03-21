@@ -1,5 +1,6 @@
 class PrimeNumbersController {
   static get(req, res, next) {
+    throw new Error('xxx');
     try {
       // TODO: validate start to be natural number > 1 (?)
       // TODO: validate end to be natural number >= start
