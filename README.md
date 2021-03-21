@@ -2,15 +2,15 @@
 
 ## TODO
 
-- [ ] Implements [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
+- [x] Implements [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 - [ ] Rename repo to node-ggtech-technical-test
-- [ ] Analyze/Add cross-env for security and handle environments
-- [ ] Analyze/Add cors for security
+- [x] Analyze/Add cross-env for security and handle environments
+- [x] Analyze/Add cors for security
 - [ ] Analyze/Add hook for lint on commit npx mrm lint-staged (?)
 
 - [ ] Integrate Joi y Boom middleware
 
-- [ ] Add some test
+- [x] Add some test
 - [ ] Split tests
 
 ## Algoritmia
@@ -20,8 +20,11 @@
 Genera los números primos del **parámetro** `start` a `end`.
 Para la ruta: `/numbersPrime/:start/:end`
 
-[Solution - Algorithm](./api/prime-numbers/utils/index.js)
-[Solution - Controller](./api/prime-numbers/prime-numbers-controller.js)
+#### Proposed Solution
+
+- [Algorithm](./api/prime-numbers/utils/index.js)
+- [Controller](./api/prime-numbers/prime-numbers-controller.js)
+- [http://localhost:8080/numbersPrime/1/100](http://localhost:8080/numbersPrime/1/100)
 
 ```sh
 curl \
@@ -30,7 +33,7 @@ curl \
   -X GET http://localhost:8080/numbersPrime/1/100
 ```
 
-### TODO
+#### TODO
 
 - [ ] validate start to be natural number > 1 (?)
 - [ ] validate end to be natural number >= start
@@ -41,6 +44,12 @@ curl \
 Ordena el array de números en base a la cantidad de veces que se repite, el array esta en el **body** con el nombre `numbers`.
 Para la ruta: `/sortArray`
 
+#### Proposed Solution
+
+- [Algorithm](./api/sort-array/utils/index.js)
+- [Controller](./api/sort-array/sort-array-controller.js)
+- [http://localhost:8080/sortArray](http://localhost:8080/sortArray)
+
 ```sh
 curl \
   -H "Accept: application/json; charset=utf-8" \
@@ -49,7 +58,7 @@ curl \
   -d '{"numbers":[1,2,3,4,5,9,6,7,3,55,3,2,22,6,77,232,35,21,2,456,123,4,5]}' 
 ```
 
-### TODO
+#### TODO
 
 - [ ] Valide numbers is an array of numbers
 - [ ] Improve and divide algorithm, analyze complex (?)
@@ -73,8 +82,22 @@ curl \
   
     Por último, intuyes que usarán este algoritmo para generar otros brackets, por lo cual tal vez **debería funcionar** en **al menos cualquier otro bracket de 8 participantes**.
   b. Tu solución:
+
+
+   Documentación:
+    - [¿Qué es un bracket de eliminación?](https://matchplay.events/handbook/single-elimination-bracket)
+    - [Tipos de emparejamiento (Slaughter) y BYE's en brackets de eliminación](https://matchplay.events/handbook/player-pairing)
+    - [Generador de brackets para torneo / Ejemplo visual](https://challonge.com/es/tournament/bracket_generator)
+    - [Numeración en un bracket](https://www.youtube.com/watch?v=cBcmDNlbZcg&ab_channel=Geek37)
+    - [Ejemplo de un gráfico de eliminación simple](https://www.youtube.com/watch?v=U2jFjMrcO2M&ab_channel=cielosampanmonteetnom)
+    - [Ejemplo de un gráfico de eliminación simple con BYE's - 1 de 2](https://www.youtube.com/watch?v=7dOsSj-7LYo&ab_channel=EFSESAScreen)
+    - [Ejemplo de un gráfico de eliminación simple con BYE's - 2 de 2](https://www.youtube.com/watch?v=EMywGAM3joQ&ab_channel=EFSESAScreen)
+    - [Creación de torneos y otros terminos](http://denegames.ca/tournaments/index.html#:~:text=To%20determine%20the%20number%20of%20matches%2C%20subtract%20one%20from%20the,matches%20to%20determine%20a%20champion.)
+    - [Diapositivas de una simple eliminación en torneos](https://es.slideshare.net/MontecriZz/single-and-double-elimination-tournament)
+    - [Tipos de emparejamiento](https://senseis.xmp.net/?GroupPairing)
+
     ~~~
-    Para mi planteamiento de solución al problema previo, marcaré los siguientes puntos:
+    Para mi planteamiento de solución al problema previo, marcaré los siguientes puntos:   
     
     Definiciones y acrónimos (con los que debo relacionarme y se darán por conocidos durante el planteamiento de la solución):
       Bracket: Una forma de organizar (en este caso la estructura de datos partidos) a los jugadores/ganadores de un torneo o liga
