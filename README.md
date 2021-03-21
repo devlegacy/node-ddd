@@ -17,7 +17,7 @@
 
 ### Ejercicio 1 - Genera números primos
 
-Genera los números primos del **parámetro** `start` a `end`.
+Genera los números primos del **parámetro** `start` a `end`.   
 Para la ruta: `/numbersPrime/:start/:end`
 
 #### Proposed Solution
@@ -41,7 +41,7 @@ curl \
 
 ### Ejercicio 2 - Ordena un Array
 
-Ordena el array de números en base a la cantidad de veces que se repite, el array esta en el **body** con el nombre `numbers`.
+Ordena el array de números en base a la cantidad de veces que se repite, el array esta en el **body** con el nombre `numbers`.   
 Para la ruta: `/sortArray`
 
 #### Proposed Solution
@@ -81,8 +81,7 @@ curl \
      - Han dicho que faltan 3 participantes y deberás reemplazar sus id por un BYE.
   
     Por último, intuyes que usarán este algoritmo para generar otros brackets, por lo cual tal vez **debería funcionar** en **al menos cualquier otro bracket de 8 participantes**.
-  b. Tu solución:
-
+  b. Tu solución:   
 
    Documentación:
     - [¿Qué es un bracket de eliminación?](https://matchplay.events/handbook/single-elimination-bracket)
