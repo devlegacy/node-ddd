@@ -41,16 +41,16 @@ describe('Test sorted function', () => {
       6,
       6,
       1,
-      7,
       9,
-      21,
-      22,
-      35,
+      7,
       55,
+      22,
       77,
-      123,
       232,
+      35,
+      21,
       456,
+      123,
     ];
     const output = sortArrayWithRepeated(input);
 
