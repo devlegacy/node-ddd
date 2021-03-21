@@ -67,15 +67,15 @@ curl \
 
 1. Considera los siguientes puntos:
   a. El array **[partidos]** representa la **primera** ronda de un **Bracket** de Eliminación Simple de **8 participantes**.
-  El primer elemento del array (id:1) es el partido de hasta arriba y así consecutivamente.
-  [¿QUÉ ES UN BRACKET?](https://matchplay.events/handbook/single-elimination-bracket)
+  El primer elemento del array (id:1) es el partido de hasta arriba y así consecutivamente.   
+  [¿QUÉ ES UN BRACKET?](https://matchplay.events/handbook/single-elimination-bracket)   
   b. El array **[participantes]** son aquellos **inscritos** que **esperan** la **creación del Bracket** de Eliminación Simple y ya **tienen un seed** asignado.
   c. Un **'Seed'** representa el **nivel de habilidad** de un participante, **se usa para asignar las posiciones iniciales** en un Bracket de Eliminación Simple. Existen varios tipos de ordenamiento, en esta prueba usaremos el tipo **Slaughter**.
-  [TIPOS DE ORDENAMIENTO](https://matchplay.events/handbook/player-pairing)
+  [TIPOS DE ORDENAMIENTO](https://matchplay.events/handbook/player-pairing)   
 
 2. Genera una solución al siguiente problema y describe tu lógica detrás de ella. (Sin código)
-  a. Problema: Te han pedido que **ordenes** **la primera ronda de un Bracket** de Eliminación Simple **(array [partidos])** en tipo **Slaughter**, es decir, **el mejor seed** deberá enfrentarse **contra el peor seed**, **usando** los participantes **inscritos (array [participantes])**.
-  Ejemplo: `{ "id": 1, "participantes": [{"id": 1}, {"id": 5}]}`
+  a. Problema: Te han pedido que **ordenes** **la primera ronda de un Bracket** de Eliminación Simple **(array [partidos])** en tipo **Slaughter**, es decir, **el mejor seed** deberá enfrentarse **contra el peor seed**, **usando** los participantes **inscritos (array [participantes])**.    
+  Ejemplo: `{ "id": 1, "participantes": [{"id": 1}, {"id": 5}]}`    
      - Han mencionado que no quieren que los participantes más fuertes (seed: 1 vs seed: 2) se enfrenten en
    la segunda ronda si llegaran a ganar su primer partido.
      - Han dicho que faltan 3 participantes y deberás reemplazar sus id por un BYE.
