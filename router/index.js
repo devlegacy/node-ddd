@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { MongoClient } = require('mongodb');
 const { primeNumbersRouter } = require('../api/prime-numbers/router');
+const { sortArrayRouter } = require('../api/sort-array/router');
 const { config } = require('../config/environment');
 const { homeRouter } = require('../services/home/router');
 
@@ -11,28 +12,11 @@ const mongoConfig = {
   useUnifiedTopology: true,
 };
 const mongoClient = new MongoClient(config.mongoURL, mongoConfig);
-router.use('/', homeRouter).use('/numbersPrime', primeNumbersRouter);
 router
-
-  .post('/sortArray', (req, res) => {
-    // TODO: Valide numbers is an array of numbers
-    /** @type Array<number> */
-    const numbers = req.body.numbers || [];
-    // TODO: Improve and divide algorith, analyze complex (?)
-    const numbersMap = Object.entries(
-      numbers.reduce((dictionary, number) => {
-        if (!(number in dictionary)) {
-          dictionary[number] = 0;
-        }
-        dictionary[number]++;
-        return dictionary;
-      }, {})
-    )
-      .sort((first, second) => second[1] - first[1])
-      .map((number) => number[0]);
-
-    res.send(numbersMap);
-  })
+  .use('/', homeRouter)
+  .use('/numbersPrime', primeNumbersRouter)
+  .use('/sortArray', sortArrayRouter);
+router
   .get('/generateBracket', (req, res) => {
     const participantes = [
       { id: 1, name: 'St1wers', seed: 1 },

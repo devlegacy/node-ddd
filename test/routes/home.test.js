@@ -1,5 +1,5 @@
 const request = require('supertest');
-const { app } = require('../');
+const { app } = require('../..');
 
 describe('Home endpoint', () => {
   it('should show hello message from home endpoint', async () => {

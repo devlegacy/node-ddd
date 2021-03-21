@@ -1,5 +1,5 @@
 const request = require('supertest');
-const { app } = require('../');
+const { app } = require('../..');
 
 describe('Prime number endpoint', () => {
   it('should return the result for 2 to 10 prime numbers', async () => {
