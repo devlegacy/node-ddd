@@ -19,6 +19,9 @@
 Genera los números primos del **parámetro** `start` a `end`.
 Para la ruta: `/numbersPrime/:start/:end`
 
+[Solution - Algorithm](./api/prime-numbers/utils/index.js)
+[Solution - Controller](./api/prime-numbers/prime-numbers-controller.js)
+
 ```sh
 curl \
   -H "Accept: application/json; charset=utf-8" \
