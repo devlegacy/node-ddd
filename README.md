@@ -69,7 +69,7 @@ curl \
   a. El array **[partidos]** representa la **primera** ronda de un **Bracket** de Eliminación Simple de **8 participantes**.
   El primer elemento del array (id:1) es el partido de hasta arriba y así consecutivamente.   
   [¿QUÉ ES UN BRACKET?](https://matchplay.events/handbook/single-elimination-bracket)   
-  b. El array **[participantes]** son aquellos **inscritos** que **esperan** la **creación del Bracket** de Eliminación Simple y ya **tienen un seed** asignado.
+  b. El array **[participantes]** son aquellos **inscritos** que **esperan** la **creación del Bracket** de Eliminación Simple y ya **tienen un seed** asignado.   
   c. Un **'Seed'** representa el **nivel de habilidad** de un participante, **se usa para asignar las posiciones iniciales** en un Bracket de Eliminación Simple. Existen varios tipos de ordenamiento, en esta prueba usaremos el tipo **Slaughter**.
   [TIPOS DE ORDENAMIENTO](https://matchplay.events/handbook/player-pairing)   
 
