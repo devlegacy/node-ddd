@@ -65,7 +65,7 @@ curl \
 
 ### Ejercicio 3 - Genera un Bracket Simple
 
-1. Considera los siguientes puntos:
+1. Considera los siguientes puntos:   
   a. El array **[partidos]** representa la **primera** ronda de un **Bracket** de Eliminación Simple de **8 participantes**.
   El primer elemento del array (id:1) es el partido de hasta arriba y así consecutivamente.   
   [¿QUÉ ES UN BRACKET?](https://matchplay.events/handbook/single-elimination-bracket)   
