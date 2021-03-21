@@ -1,7 +1,7 @@
 const { sortArrayWithRepeated } = require('./utils');
 
 class SortArrayController {
-  static get(req, res, next) {
+  static post(req, res, next) {
     try {
       /** @type Array<number> */
       const { numbers } = req.body;
