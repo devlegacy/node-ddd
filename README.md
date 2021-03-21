@@ -2,14 +2,15 @@
 
 ## TODO
 
+- [ ] Implements [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 - [ ] Rename repo to node-ggtech-technical-test
-- [ ] Add cross-env for security and handle environments
-- [ ] Add cors for security
-- [ ] Add some test
-- [ ] Analyze install cross-env (?)
-- [ ] Add hook for lint on commit npx mrm lint-staged (?)
-- [ ] [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
+- [ ] Analyze/Add cross-env for security and handle environments
+- [ ] Analyze/Add cors for security
+- [ ] Analyze/Add hook for lint on commit npx mrm lint-staged (?)
 
+- [ ] Integrate Joi y Boom middleware
+
+- [ ] Add some test
 
 ## Algoritmia
 
@@ -24,6 +25,12 @@ curl \
   -H "Content-Type: application/json; charset=utf-8" \
   -X GET http://localhost:8080/numbersPrime/1/100
 ```
+
+### TODO
+
+- [ ] validate start to be natural number > 1 (?)
+- [ ] validate end to be natural number >= start
+- [ ] Do validations on middleware (?)
 
 ### Ejercicio 2 - Ordena un Array
 

@@ -10,6 +10,8 @@ describe('Prime number endpoint', () => {
     expect(response.body).toHaveProperty('message');
 
     expect(response.body.data).toEqual([2, 3, 5, 7]);
-    expect(response.body.message).toEqual('List of prime numbers from 2 to 10');
+    expect(response.body.message).toEqual(
+      'List of prime numbers from 2 to 10. Count: 4.'
+    );
   });
 });
