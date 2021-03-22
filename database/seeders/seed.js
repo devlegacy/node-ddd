@@ -1,22 +1,11 @@
 const faker = require('faker');
-const { MongoClient } = require('mongodb');
-const mongoURL = process.env.MONGO_URL || 'mongodb://localhost:27017/ggtech';
-
-/** @type import('mongodb').MongoClientOptions */
-const mongoConfig = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  // keepAlive: 1,
-};
-const mongoClient = new MongoClient(mongoURL, mongoConfig);
+const MongoDB = require('../../config/mongo');
 
 (async () => {
-  let connect;
+  await MongoDB.connect();
   try {
-    connect = await mongoClient.connect();
-    const db = connect.db('ggtech');
-    const tournamentsCollection = db.collection('Tournaments');
-    const participantsCollection = db.collection('Participants');
+    const tournamentsCollection = MongoDB.db.collection('Tournaments');
+    const participantsCollection = MongoDB.db.collection('Participants');
 
     const countTournaments = await tournamentsCollection.countDocuments();
     if (countTournaments) {
@@ -69,6 +58,6 @@ const mongoClient = new MongoClient(mongoURL, mongoConfig);
   } catch (err) {
     console.error(err);
   } finally {
-    connect.close();
+    MongoDB.connection.close();
   }
 })();

@@ -8,6 +8,7 @@ const mongoConfig = {
 const USER = encodeURIComponent(config.dbUser);
 const PASSWORD = encodeURIComponent(config.dbPassword);
 const DB_NAME = config.dbName;
+// 'mongodb://localhost:27017/ggtech'
 const MONGO_URL = `mongodb+srv://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${DB_NAME}?retryWrites=true&w=majority`;
 
 class MongoDB {
@@ -31,16 +32,5 @@ class MongoDB {
 MongoDB.connection = undefined;
 /** @type import('mongodb').Db | undefined */
 MongoDB.db = undefined;
-
-(async () => {
-  try {
-    await MongoDB.connect();
-    console.log(await MongoDB.db.collection('participants').countDocuments());
-  } catch (err) {
-    console.error(err);
-  } finally {
-    await MongoDB.connection.close();
-  }
-})();
 
 module.exports = MongoDB;

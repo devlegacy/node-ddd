@@ -141,6 +141,7 @@ curl \
 
 ## Bases de datos
 
+```
 Tournaments:
 -_id: ObjectId
 -name: string
@@ -155,21 +156,27 @@ Tournaments:
   -_id: ObjectId,
   -name: string
 }
+```
 
+```
 Participants:
 -_id: ObjectId
 -name: string
 -username: string
 -email: string
 -phone: number
+```
+### Ejercicio 1
 
-Completa la siguiente función para que regrese todos los torneos activos(status = true) con los campos básicos
-(nombre del torneo, descripción, participantes(nombre, username))
+Completa la siguiente función para que regrese todos los torneos `activos(status = true)` con los campos básicos
+`(nombre del torneo, descripción, participantes(nombre, username))`
 
-Tournaments // es la variable de la colección Tournaments
-Participants // es la variable de la colección Participants
+- `Tournaments` // es la variable de la colección Tournaments
+- `Participants` // es la variable de la colección Participants
 
+```js
 function getTournaments() {}
+```
 
 ```sh
 curl \
@@ -178,14 +185,17 @@ curl \
   -X GET http://localhost:8080/tournaments
 ```
 
-Completa la siguiente función para que regrese todos los torneos que contengan en su nombre o descripción
-el string que recibe como parámetro
+### Ejercicio 2
 
+Completa la siguiente función para que regrese todos los torneos que contengan en su nombre o descripción el `string` que recibe como `parámetro`
+
+```js
 function getTournamentsByNameOrDescription(stringSearch) {}
+```
 
 ```sh
 curl \
   -H "Accept: application/json; charset=utf-8" \
   -H "Content-Type: application/json; charset=utf-8" \
-  -X GET http://localhost:8080/tournamentsByNameOrDescription/hello
+  -X GET http://localhost:8080/tournaments/byNameOrDescription/et
 ```

@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "a8929fb0-1ced-45e9-a164-01cc5c2da6d5",
+		"name": "ggtech-technical-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "home",
+			"item": [
+				{
+					"name": "show hello message",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "prime-numbers",
+					"item": [
+						{
+							"name": "show prime numbers from :start to :end",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/numbersPrime/-10/100",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"numbersPrime",
+										"-10",
+										"100"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "sort array",
+					"item": [
+						{
+							"name": "Send and sort array",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"numbers\": [1,2,3,4,5,9,6,7,3,55,3,2,22,6,77,232,35,21,2,456,123,4,5]\r\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/sortArray",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sortArray"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "brackets",
+					"item": [
+						{
+							"name": "Generate a simple bracket",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/generateBracket",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"generateBracket"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "errors",
+					"item": [
+						{
+							"name": "404 - not found",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/not-found",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"not-found"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tournaments",
+					"item": [
+						{
+							"name": "Get active tournaments",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/tournaments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tournaments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get tournamenst by name or description",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/tournaments/byNameOrDescription/designed",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tournaments",
+										"byNameOrDescription",
+										"designed"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
