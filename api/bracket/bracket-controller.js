@@ -1,4 +1,4 @@
-const { makeBracket, customBracket } = require('./utils');
+const { customBracket } = require('./utils');
 
 class BracketController {
   static get(req, res, next) {

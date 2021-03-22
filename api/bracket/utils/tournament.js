@@ -8,7 +8,6 @@ class Tournament {
 
   make() {
     for (let i = 0; i < this.games.length; i++) {
-      console.log(this.games[i].participantes, this.matches[i]);
       this.games[i].participantes = this.matches[i];
     }
   }
