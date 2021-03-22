@@ -22,7 +22,7 @@ Para la ruta: `/numbersPrime/:start/:end`
 
 #### Proposed Solution
 
-- [Algorithm](./api/prime-numbers/utils/index.js)
+- [Algorithm - calculatePrimeNumbers](./api/prime-numbers/utils/index.js)
 - [Controller](./api/prime-numbers/prime-numbers-controller.js)
 - [http://localhost:8080/numbersPrime/1/100](http://localhost:8080/numbersPrime/1/100)
 
@@ -46,7 +46,7 @@ Para la ruta: `/sortArray`
 
 #### Proposed Solution
 
-- [Algorithm](./api/sort-array/utils/index.js)
+- [Algorithm - sortArrayWithRepeated](./api/sort-array/utils/index.js)
 - [Controller](./api/sort-array/sort-array-controller.js)
 - [http://localhost:8080/sortArray](http://localhost:8080/sortArray)
 
@@ -138,6 +138,12 @@ curl \
   a. Funcionalidad
   b. Facilidad de Lectura
   c. Buenas Practicas 
+
+#### Proposed Solution
+
+- [Algorithm - customBracket](./api/bracket/utils/index.js)
+- [Controller](./api/bracket/bracket-controller.js)
+- [http://localhost:8080/generateBracket](http://localhost:8080/generateBracket)
 
 ```sh
 curl \
