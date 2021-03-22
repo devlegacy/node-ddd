@@ -99,9 +99,11 @@ curl \
     Para mi planteamiento de solución al problema previo, marcaré los siguientes puntos:   
     
     Definiciones y acrónimos (con los que debo relacionarme y se darán por conocidos durante el planteamiento de la solución):
-      Bracket: Una forma de organizar (en este caso la estructura de datos partidos) a los jugadores/ganadores de un torneo o liga
+      Bracket: Una forma de organizar (en este caso la estructura de datos partidos) a los jugadores/ganadores de un torneo o liga. Toma su nombre por los símbolos [ ]
       Seed: Nivel de habilidad de un participante
-      Slaughter: Es un tipo de ordenamiento para un bracken en el que el jugador más fuerte (basado en el seed), se enfrenta al más débil, el segundo más fuerte al segundo más débil y así sucesivamente. Esto supone una ventaja al jugador con una seed mayor
+      Slaughter: Es un tipo de ordenamiento para un Bracket en el que el jugador más fuerte (basado en el seed), se enfrenta al más débil, el segundo más fuerte al segundo más débil y así sucesivamente. Esto supone una ventaja al jugador con una seed mayor
+      Participantes: los jugadores a ser acomodados en un bracket
+      Partidos: El Bracket de eliminación simple resultante ordenado como Slaughter
     
     Metas / Objetivos
       Generar un bracket de eliminación Simple de n-8 participantes con emparejamiento Slaughter, siguiendo las métricas planteadas en el punto 2 del ejercicio 2.
@@ -113,24 +115,31 @@ curl \
       - El valor de los participantes ronda entre 6 y 8, (por confirmar)*
       - Se asume que el máximo de participantes son 8, (por confirmar)*
       - El id y el seed no tienen relación, aunque en este caso lo parezca
-      - Que si los top rank ganan, no deben enfrentarse pronto y deben seguir teniendo ventaja contra los más débiles (en este caso que no sean adyacentes (?))
+      - Si los top rank ganan, no deben enfrentarse pronto y deben seguir teniendo ventaja contra los más débiles (en este caso que no sean adyacentes (?))
       - Siguiendo Slaughter, los top jugadores siempre tendrán ventaja
     
     Limitaciones e incógnitas
-      - La fuente de participantes
+      - La fuente de datos de participantes
       - El número de participantes que llegarán
       - Como se genera el seed
     ~~~
 
     ~~~
+      1. Tomando como datos de entra los participantes y partidos
+         1. Solicitar como dato de entrada extra el número de participantes que se esperán.
+      2. Ordenar los participantes con Slaughter
+         1.  Revisar que los participantes cumplan con el número esperado
+         2.  En caso de no estar completos los participantes generar tantos BYE's como sea necesario para cumplir con la cantidad de participantes esperada. Cada BYE deberá tener un seed menor
+      3. Emparejar participantes con el seed mayor al menor
+      4. Guardar a los participantes en partidos contemplando la ventaja de los mejores jugadores
     ~~~
-
-## Bases de datos
 
 3. Genera el código que reproduzca la solución que has descrito, valoraremos:
   a. Funcionalidad
   b. Facilidad de Lectura
   c. Buenas Practicas 
+
+## Bases de datos
 
 Tournaments:
 -_id: ObjectId
