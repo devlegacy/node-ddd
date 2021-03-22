@@ -34,7 +34,8 @@ module.exports.makeBracket = (participantes, partidos) => {
   return partidos;
 };
 
-module.exports.customBracket = (participantes, partidos) => {
-  const bracket = new Bracket(participantes, partidos, 8);
+module.exports.customBracket = (participantes, partidos, limit = 8) => {
+  const bracket = new Bracket(participantes, partidos, limit);
+  bracket.generateSlaughterMatches();
   return bracket.tournaments.games;
 };

@@ -139,6 +139,13 @@ curl \
   b. Facilidad de Lectura
   c. Buenas Practicas 
 
+```sh
+curl \
+  -H "Accept: application/json; charset=utf-8" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -X GET http://localhost:8080/generateBracket 
+```
+
 ## Bases de datos
 
 ```

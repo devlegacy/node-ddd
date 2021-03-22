@@ -17,7 +17,7 @@ class BracketController {
         { id: 4, participantes: [{ id: undefined }, { id: undefined }] },
       ];
 
-      const bracket = customBracket(participantes, partidos);
+      const bracket = customBracket(participantes, partidos, 8);
 
       res.status(200).json({
         data: bracket,
