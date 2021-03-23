@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-const container = require('../presentation/container');
+const container = require('../src/presentation/container');
 const application = container.resolve('server');
 
 const app = application.app();
