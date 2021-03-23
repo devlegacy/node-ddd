@@ -4,7 +4,11 @@
  * Module dependencies.
  */
 
-const { app } = require('../');
+const container = require('../presentation/container');
+const application = container.resolve('server');
+
+const app = application.app();
+
 const debug = require('debug')('node-ggtech-technical-test:server');
 const http = require('http');
 
