@@ -28,6 +28,28 @@
 			]
 		},
 		{
+			"name": "users",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "api",
 			"item": [
 				{
@@ -50,11 +72,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/numbersPrime/-10/100",
+									"raw": "{{api_url}}//numbersPrime/-10/100",
 									"host": [
-										"{{base_url}}"
+										"{{api_url}}"
 									],
 									"path": [
+										"",
 										"numbersPrime",
 										"-10",
 										"100"
@@ -89,9 +112,9 @@
 									"raw": "{\r\n    \"numbers\": [1,2,3,4,5,9,6,7,3,55,3,2,22,6,77,232,35,21,2,456,123,4,5]\r\n}"
 								},
 								"url": {
-									"raw": "{{base_url}}/sortArray",
+									"raw": "{{api_url}}/sortArray",
 									"host": [
-										"{{base_url}}"
+										"{{api_url}}"
 									],
 									"path": [
 										"sortArray"
@@ -122,12 +145,75 @@
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/generateBracket",
+									"raw": "{{api_url}}/generateBracket",
 									"host": [
-										"{{base_url}}"
+										"{{api_url}}"
 									],
 									"path": [
 										"generateBracket"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tournaments",
+					"item": [
+						{
+							"name": "Get active tournaments",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_url}}/tournaments",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"tournaments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get tournamenst by name or description",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{api_url}}/tournaments/byNameOrDescription/designed",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"tournaments",
+										"byNameOrDescription",
+										"designed"
 									]
 								}
 							},
@@ -161,69 +247,6 @@
 									],
 									"path": [
 										"not-found"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "tournaments",
-					"item": [
-						{
-							"name": "Get active tournaments",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json; charset=utf-8",
-										"type": "text"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json; charset=utf-8",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{base_url}}/tournaments",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"tournaments"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get tournamenst by name or description",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json; charset=utf-8",
-										"type": "text"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json; charset=utf-8",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{base_url}}/tournaments/byNameOrDescription/designed",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"tournaments",
-										"byNameOrDescription",
-										"designed"
 									]
 								}
 							},
