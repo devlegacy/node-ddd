@@ -1,5 +1,5 @@
 const { attributes } = require('structure');
-
+// Model / Entity
 const User = attributes({
   name: {
     type: String,

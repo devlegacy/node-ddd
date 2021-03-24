@@ -1,5 +1,5 @@
 module.exports = {
-  toDBEntity(user) {
+  userToDBEntity(user) {
     const { id, name, lastName } = user;
     return { id, name, lastName };
   },

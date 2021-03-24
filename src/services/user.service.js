@@ -1,4 +1,5 @@
-const { toDomainEntity } = require('../domain/mappers');
+const { userToDBEntity } = require('../dal/mappers');
+const { userToDomainEntity } = require('../domain/mappers');
 
 class UserService {
   constructor({ UserRepository }) {
@@ -8,11 +9,11 @@ class UserService {
   async getUser() {
     const users = await this._userRepository.getUsers();
     // do something
-    return users;
+    return users.map(userToDomainEntity);
   }
 
   async createUser(user) {
-    user = toDomainEntity(user);
+    user = userToDBEntity(user);
 
     const newUser = await this._userRepository.createUser(user);
     return newUser;
