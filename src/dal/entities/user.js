@@ -1,9 +1,18 @@
 // https://docs.mongodb.com/manual/core/schema-validation/#json-schema
-
-module.exports = (mongo) => {
+/**
+ *
+ * @param {import('mongodb').Db} mongo
+ * @returns
+ */
+module.exports = async (mongo) => {
+  const collection = mongo.collection('Users');
+  const count = await collection.countDocuments();
+  if (count >= 0) {
+    return { name: 'users', model: collection };
+  }
   return {
     name: 'users',
-    model: mongo.createCollection('users', {
+    model: mongo.createCollection('Users', {
       validator: {
         $jsonSchema: {
           bsonType: 'object',
