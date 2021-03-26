@@ -16,7 +16,7 @@ const mongoConfig = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
-const MONGO_URL = `mongodb+srv://db_user_ggtech:4Fc98JsHiIn6hDNQ@cluster0.bqel9.mongodb.net/ggtech?retryWrites=true&w=majority`;
+const MONGO_URL = `mongodb+srv://db_user_ggtech:MVw14i3hRoLmcsDq@cluster0.bqel9.mongodb.net/ggtech?retryWrites=true&w=majority`;
 // const MONGO_URL = `mongodb+srv://${USER}:${PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?retryWrites=true&w=majority`;
 // 'mongodb://localhost:27017/ggtech'
 const Mongo = new MongoClient(MONGO_URL, mongoConfig);
