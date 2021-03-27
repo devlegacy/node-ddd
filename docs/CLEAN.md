@@ -38,3 +38,10 @@ src
     interactors
     repositories
   dataSource
+
+
+application
+  - command / uses cases / cqrs 
+  - queries / uses cases / cqrs 
+domain
+infrastructure

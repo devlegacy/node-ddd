@@ -1,10 +1,7 @@
-const Tournament = require('./tournament');
-const tournament = new Tournament();
-
 class TournamentController {
   async get(req, res, next) {
     try {
-      const tournaments = await tournament.get();
+      const tournaments = [];
       res.json({
         data: tournaments,
         message: 'Active tournaments',
@@ -16,9 +13,7 @@ class TournamentController {
   async getByNameOrDescription(req, res, next) {
     try {
       const { nameOrDescription } = req.params;
-      const tournaments = await tournament.getByNameOrDescription(
-        nameOrDescription
-      );
+      const tournaments = [nameOrDescription];
       res.json({
         data: tournaments,
         message: 'Tournaments by name or description',

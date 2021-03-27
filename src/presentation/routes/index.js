@@ -27,8 +27,11 @@ module.exports = ({
     .use('/generateBracket', BracketRouter)
     .use('/tournaments', TournamentRouter);
 
-  webRoutes.use('/', HomeRouter);
-  webRoutes.use('/users', UserRouter);
+  webRoutes
+    .use(express.json())
+    .use(express.urlencoded({ extended: true }))
+    .use(compression());
+  webRoutes.use('/', HomeRouter).use('/users', UserRouter);
 
   router.use('/api/', apiRoutes);
   router.use('/', webRoutes);

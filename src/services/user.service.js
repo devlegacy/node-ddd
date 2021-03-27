@@ -6,7 +6,7 @@ class UserService {
     this._userRepository = UserRepository;
   }
 
-  async getUser() {
+  async getUsers() {
     const users = await this._userRepository.getUsers();
     // do something
     return users.map(userToDomainEntity);

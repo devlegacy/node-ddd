@@ -17,6 +17,8 @@ const TournamentController = require('./api/tournaments/tournament.controller');
 const HomeRouter = require('./web/home/router');
 const HomeController = require('./web/home/home.controller');
 const UserService = require('../services/user.service');
+const { db } = require('../dal/entities/mongo');
+const UserRepository = require('../dal/repositories/user.repository');
 
 container
   .register({
@@ -33,9 +35,10 @@ container
   })
   .register({
     router: asFunction(Routes).singleton(),
+    config: asValue(config),
   })
   .register({
-    config: asValue(config),
+    db: asValue(db),
   })
   .register({
     UserRouter: asFunction(UserRouter).singleton(),
@@ -47,6 +50,9 @@ container
   })
   .register({
     UserService: asClass(UserService).singleton(),
+  })
+  .register({
+    UserRepository: asClass(UserRepository).singleton(),
   });
 
 module.exports = container;

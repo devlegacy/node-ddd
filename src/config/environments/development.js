@@ -1,8 +1,8 @@
 module.exports = {
   PORT: process.env.PORT || 8080,
   DB_DRIVER: 'mongo',
-  DB_HOST: 'localhost',
-  DB_USER: 'user',
-  DB_PASSWORD: 'password',
-  DB_NAME: 'dbname_dev',
+  DB_HOST: process.env.DB_HOST,
+  DB_USER: process.env.DB_USER,
+  DB_PASSWORD: process.env.DB_PASSWORD,
+  DB_NAME: process.env.DB_NAME,
 };
