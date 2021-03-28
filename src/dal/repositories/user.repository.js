@@ -5,7 +5,9 @@ class UserRepository {
 
   async getUsers() {
     const db = await this._db;
-    return await db.mongo.collection('Users').find().toArray();
+    /** @type import('mongodb').Db */
+    const mongo = db.mongo;
+    return await mongo.collection('Users').find().toArray();
   }
 
   async createUser(user) {

@@ -18,11 +18,11 @@ const mongoConfig = {
 };
 
 const MONGO_URL = `mongodb+srv://${USER}:${PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?retryWrites=true&w=majority`;
-console.log(MONGO_URL);
 const client = new MongoClient(MONGO_URL, mongoConfig);
 const db = client
   .connect()
   .then((connection) => {
+    console.log('Connected to database');
     const db = {
       Mongo: connection,
       mongo: connection.db(DB_NAME),

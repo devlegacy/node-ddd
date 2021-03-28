@@ -22,6 +22,7 @@ const UserService = require('../services/user.service');
 const { db } = require('../dal/entities/mongo');
 const UserRepository = require('../dal/repositories/user.repository');
 const MovieService = require('../services/movie.service');
+const MovieRepository = require('../dal/repositories/movie.repository');
 
 container
   .register({
@@ -59,6 +60,7 @@ container
   })
   .register({
     UserRepository: asClass(UserRepository).singleton(),
+    MovieRepository: asClass(MovieRepository).singleton(),
   });
 
 module.exports = container;
