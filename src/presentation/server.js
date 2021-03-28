@@ -6,7 +6,10 @@ class Server {
     this._config = config;
 
     this._express = express();
-    this._express.use(router);
+    this._express
+      .set('port', this._config.PORT)
+      .set('env', this._config.NODE_ENV)
+      .use(router);
   }
 
   async start() {

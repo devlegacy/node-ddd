@@ -13,6 +13,7 @@
 - [ ] Analyze/Add hook for lint on commit `npx mrm lint-staged` (?)
 
 - [ ] Integrate Joi y Boom middleware
+- [ ] express-async-errors
 
 - [x] Add some test
 - [ ] Split tests
