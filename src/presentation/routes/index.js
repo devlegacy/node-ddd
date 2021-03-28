@@ -10,6 +10,7 @@ module.exports = ({
   PrimeNumbersRouter,
   SortArrayRouter,
   TournamentRouter,
+  MovieRouter,
 }) => {
   const router = Router();
   const apiRoutes = Router();
@@ -21,11 +22,11 @@ module.exports = ({
     .use(express.urlencoded({ extended: true }))
     .use(compression());
   apiRoutes
-
     .use('/numbersPrime', PrimeNumbersRouter)
     .use('/sortArray', SortArrayRouter)
     .use('/generateBracket', BracketRouter)
-    .use('/tournaments', TournamentRouter);
+    .use('/tournaments', TournamentRouter)
+    .use('/movies', MovieRouter);
 
   webRoutes
     .use(express.json())

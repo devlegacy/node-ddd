@@ -1,12 +1,16 @@
 # Prueba técnica
 
+## Notes about node
+
+[DEBUG=app:*](https://stackoverflow.com/questions/36240385/explanation-for-what-debug-myapp-npm-start-is-actually-doing)
+
 ## TODO
 
 - [x] Implements [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 - [ ] Rename repo to node-ggtech-technical-test
 - [x] Analyze/Add cross-env for security and handle environments
 - [x] Analyze/Add cors for security
-- [ ] Analyze/Add hook for lint on commit npx mrm lint-staged (?)
+- [ ] Analyze/Add hook for lint on commit `npx mrm lint-staged` (?)
 
 - [ ] Integrate Joi y Boom middleware
 
