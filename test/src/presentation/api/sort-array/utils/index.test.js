@@ -1,4 +1,6 @@
-const { sortArrayWithRepeated } = require('../../../api/sort-array/utils');
+const {
+  sortArrayWithRepeated,
+} = require('../../../../../../src/presentation/api/sort-array/utils/');
 
 describe('Test sorted function', () => {
   it('Should sorted array', () => {

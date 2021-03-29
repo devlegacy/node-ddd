@@ -9,7 +9,7 @@ const moviesMock = [
     duration: 1922,
     contentRating: 'PG-13',
     source: 'https://cbsnews.com/eleifend/pede.png',
-    tags: ['Drama|Romance'],
+    tags: ['Drama', 'Romance'],
   },
   {
     id: 'ce16b2c2-1dd0-4e69-8176-09040f11cc2d',
@@ -21,7 +21,7 @@ const moviesMock = [
     duration: 1987,
     contentRating: 'PG-13',
     source: 'http://census.gov/volutpat.jsp',
-    tags: ['Horror', 'Documentary', 'Drama|Romance'],
+    tags: ['Horror', 'Documentary', 'Drama', 'Romance'],
   },
   {
     id: '0c008a69-b8bb-4c96-97b3-2031ad0fc758',
@@ -33,7 +33,7 @@ const moviesMock = [
     duration: 1947,
     contentRating: 'PG',
     source: 'http://auda.org.au/sapien/sapien/non/mi.png',
-    tags: ['Comedy|Drama'],
+    tags: ['Comedy', 'Drama'],
   },
   {
     id: '38436953-f828-4000-a1e3-5ed36c633ff2',
@@ -58,8 +58,16 @@ const moviesMock = [
     contentRating: 'G',
     source: 'https://fda.gov/non/velit/nec/nisi/vulputate/nonummy/maecenas.xml',
     tags: [
-      'Crime|Drama|Fantasy|Film-Noir|Mystery|Romance',
-      'Action|Comedy|Crime|Drama',
+      'Crime',
+      'Drama',
+      'Fantasy',
+      'Film-Noir',
+      'Mystery',
+      'Romance',
+      'Action',
+      'Comedy',
+      'Crime',
+      'Drama',
     ],
   },
   {
@@ -73,11 +81,17 @@ const moviesMock = [
     contentRating: 'NC-17',
     source: 'https://1688.com/varius/ut.html',
     tags: [
-      'Drama|Film-Noir',
-      'Comedy|Romance',
-      'Action|Sci-Fi',
-      'Comedy|Drama',
-      'Comedy|Drama|Romance',
+      'Drama',
+      'Film-Noir',
+      'Comedy',
+      'Romance',
+      'Action',
+      'Sci-Fi',
+      'Comedy',
+      'Drama',
+      'Comedy',
+      'Drama',
+      'Romance',
     ],
   },
   {
@@ -91,7 +105,15 @@ const moviesMock = [
     contentRating: 'NC-17',
     source:
       'http://amazonaws.com/augue/aliquam/erat/volutpat/in/congue/etiam.png',
-    tags: ['Action|Thriller', 'Action|Adventure', 'Drama|Romance|Sci-Fi'],
+    tags: [
+      'Action',
+      'Thriller',
+      'Action',
+      'Adventure',
+      'Drama',
+      'Romance',
+      'Sci-Fi',
+    ],
   },
   {
     id: '4c1c536a-f323-4feb-80c1-ca93b896ae70',
@@ -103,7 +125,7 @@ const moviesMock = [
     duration: 2039,
     contentRating: 'PG',
     source: 'http://nhs.uk/maecenas/leo/odio/condimentum.jsp',
-    tags: ['Adventure|Animation|Children|Drama|Fantasy'],
+    tags: ['Adventure', 'Animation', 'Children', 'Drama', 'Fantasy'],
   },
   {
     id: 'a8c6c9fc-0107-494f-83ad-9ceadb11dc35',
@@ -115,7 +137,7 @@ const moviesMock = [
     duration: 1935,
     contentRating: 'G',
     source: 'https://nba.com/sit.png',
-    tags: ['Crime|Drama|Mystery|Thriller'],
+    tags: ['Crime', 'Drama', 'Mystery', 'Thriller'],
   },
   {
     id: '5d448927-7d8e-49a7-a3bc-280938a05581',
@@ -127,10 +149,26 @@ const moviesMock = [
     duration: 1901,
     contentRating: 'PG-13',
     source: 'http://google.cn/at/turpis/donec/posuere/metus/vitae/ipsum.jsp',
-    tags: ['Action|Adventure|Drama'],
+    tags: ['Action', 'Adventure', 'Drama'],
   },
 ];
 
+function filteredMoviesMock(tag) {
+  return moviesMock.filter((movie) => movie.tags.includes(tag));
+}
+
+class MovieServiceMock {
+  async getMovies() {
+    return Promise.resolve(moviesMock);
+  }
+
+  async createMovie() {
+    return Promise.resolve(moviesMock[0]);
+  }
+}
+
 module.exports = {
   moviesMock,
+  filteredMoviesMock,
+  MovieServiceMock,
 };
