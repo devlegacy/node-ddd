@@ -1,10 +1,18 @@
+const cacheResponse = require('../../utils/cacheResponse');
+const {
+  FIVE_MINUTES_IN_SECONDS,
+  SIXTY_MINUTES_IN_SECONDS,
+} = require('../../utils/time');
+
 let _movieService = null;
 
 class MovieController {
   constructor({ MovieService }) {
     _movieService = MovieService;
   }
+
   async index(req, res, next) {
+    cacheResponse(res, FIVE_MINUTES_IN_SECONDS);
     const { tags } = req.query;
     try {
       const movies = await _movieService.getMovies({ tags });
@@ -18,6 +26,7 @@ class MovieController {
   }
 
   async show(req, res, next) {
+    cacheResponse(res, SIXTY_MINUTES_IN_SECONDS);
     const { movieId } = req.params;
     try {
       const movie = await _movieService.getMovie({ movieId });

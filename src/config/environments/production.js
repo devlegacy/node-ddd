@@ -2,8 +2,8 @@ module.exports = {
   PORT: process.env.PORT || 8080,
   NODE_ENV: process.env.NODE_ENV || 'production',
   DB_DRIVER: 'mongo',
-  DB_HOST: 'localhost',
-  DB_USER: 'user_prod',
-  DB_PASSWORD: 'password',
-  DB_NAME: 'dbname_prod',
+  DB_HOST: process.env.DB_HOST,
+  DB_USER: process.env.DB_USER,
+  DB_PASSWORD: process.env.DB_PASSWORD,
+  DB_NAME: process.env.DB_NAME,
 };
