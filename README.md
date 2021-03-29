@@ -1,5 +1,7 @@
 # Prueba técnica
 
+[![Node.js CI](https://github.com/devlegacy/node-ddd/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/devlegacy/node-ddd/actions/workflows/node.js.yml)
+
 ## Notes about node
 
 [DEBUG=app:*](https://stackoverflow.com/questions/36240385/explanation-for-what-debug-myapp-npm-start-is-actually-doing)
