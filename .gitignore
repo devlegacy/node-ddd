@@ -1130,3 +1130,5 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # End of https://www.toptal.com/developers/gitignore/api/git,vim,node,dart,redis,linux,macos,angular,windows,laravel,flutter,firebase,composer,sublimetext,codeigniter,reactnative,phpstorm+all,visualstudiocode,visualstudio
+
+.vercel

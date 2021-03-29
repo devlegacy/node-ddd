@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-
 const container = require('../src/presentation/container');
 const application = container.resolve('server');
 
