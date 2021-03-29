@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "build": {
+    "env": {
+      "NPM_ONLY_PRODUCTION": "1"
+    }
+  },
+  "builds": [
+    {
+      "src": "/bin/www.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/bin/www.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/bin/www.js"
+    }
+  ]
+}
