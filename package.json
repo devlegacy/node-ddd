@@ -11,7 +11,7 @@
     "jest:notify": "jest --notify --config=jest.config.js",
     "jest:coverage": "jest --coverage --notify --config=jest.config.js",
     "jest:watch": "jest --watchAll",
-    "test": "jest"
+    "test": "cross-env NODE_ENV=development jest"
   },
   "keywords": [],
   "author": "Samuel R. <samuel_-_rojas@hotmail.com> (https://)",
