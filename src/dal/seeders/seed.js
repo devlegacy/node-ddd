@@ -1,5 +1,5 @@
 const faker = require('faker');
-const { db } = require('../../src/dal/entities/mongo');
+const { db } = require('../models/mongo');
 
 const participants = new Array(50).fill(null).map(() => {
   return {

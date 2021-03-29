@@ -20,6 +20,8 @@
 - [x] Add some test
 - [ ] Split tests
 
+- [ ] Base controller (?)
+
 ## Algoritmia
 
 ### Ejercicio 1 - Genera números primos

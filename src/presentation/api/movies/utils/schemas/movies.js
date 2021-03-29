@@ -32,8 +32,10 @@ const updateMovieSchema = Joi.object({
   tags: movieTagsSchema,
 });
 
+const getMovieIDSchema = Joi.object({ movieId: movieIdSchema });
+
 module.exports = {
-  movieIdSchema,
+  getMovieIDSchema,
   createMovieSchema,
   updateMovieSchema,
 };

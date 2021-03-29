@@ -4,6 +4,7 @@ class MovieRepository {
   constructor({ db }) {
     this._db = db;
   }
+
   async getMovies(collection, query) {
     const db = await this._db;
     /** @type import('mongodb').Db */
@@ -17,7 +18,11 @@ class MovieRepository {
     /** @type import('mongodb').Db */
     const mongo = db.mongo;
 
-    return await mongo.collection(collection).findOne({ _id: ObjectId(id) });
+    const movie = await mongo
+      .collection(collection)
+      .findOne({ _id: ObjectId(id) });
+
+    return movie;
   }
 
   async createMovie(collection, data) {

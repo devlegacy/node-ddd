@@ -30,6 +30,12 @@ class MovieController {
     const { movieId } = req.params;
     try {
       const movie = await _movieService.getMovie({ movieId });
+
+      if (!movie) {
+        res.status(400).json({ message: 'Movie not found' });
+        return;
+      }
+
       res.status(200).json({
         data: movie,
         message: 'Movie retrieved',

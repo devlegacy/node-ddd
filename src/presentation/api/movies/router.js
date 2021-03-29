@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const requestValidationHandler = require('../../middlewares/requestValidationHandler');
 const {
-  movieIdSchema,
+  getMovieIDSchema,
   createMovieSchema,
   updateMovieSchema,
 } = require('./utils/schemas/movies');
@@ -12,7 +12,7 @@ module.exports = ({ MovieController }) => {
   router.get('/', MovieController.index);
   router.get(
     '/:movieId',
-    requestValidationHandler({ movieId: movieIdSchema }, 'params'),
+    requestValidationHandler(getMovieIDSchema, 'params'),
     MovieController.show
   );
   router.post(
@@ -22,13 +22,13 @@ module.exports = ({ MovieController }) => {
   );
   router.put(
     '/:movieId',
-    requestValidationHandler({ movieId: movieIdSchema }, 'params'),
+    requestValidationHandler(getMovieIDSchema, 'params'),
     requestValidationHandler(updateMovieSchema, 'body'),
     MovieController.update
   );
   router.delete(
     '/:movieId',
-    requestValidationHandler({ movieId: movieIdSchema }, 'params'),
+    requestValidationHandler(getMovieIDSchema, 'params'),
     MovieController.delete
   );
 

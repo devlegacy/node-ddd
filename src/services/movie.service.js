@@ -18,7 +18,7 @@ class MovieService {
       this.collection,
       movieId
     );
-    return movie || {};
+    return movie || null;
   }
 
   async createMovie({ movie }) {
